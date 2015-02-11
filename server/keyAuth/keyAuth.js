@@ -1,7 +1,7 @@
 var Promise = require('bluebird');
 var keys = require('../../security/keys/keys');
-var keyAuth = {};
 
+var keyAuth = {};
 keyAuth.keyCheck = function (req, res) {
   var keyid = req.params.keyid;
   return new Promise(function (resolve, reject) {
@@ -21,11 +21,11 @@ keyAuth.keyCheck = function (req, res) {
 keyAuth.generateJWK = function (keyid) {
   return new Promise(function (resolve, reject) {
     var jwk = {
-        kty: 'oct',
-        alg: "A128GCM",
-        kid: new Buffer(keyid, 'hex').toString('base64').replace(/=/g, ''),
-        k: keys[keyid].toString('base64').replace(/=/g, '')
-      };
+      kty: 'oct',
+      alg: "A128GCM",
+      kid: new Buffer(keyid, 'hex').toString('base64').replace(/=/g, ''),
+      k: keys[keyid].toString('base64').replace(/=/g, '')
+    };
     resolve(jwk);
   });
 };

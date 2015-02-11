@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test/*.js",
     "start": "node server.js"
   },
   "repository": {
@@ -20,5 +20,9 @@
   "dependencies": {
     "express": "^4.11.2",
     "bluebird": "~2.9.8"
+  },
+  "devDependencies": {
+    "chai": "~2.0.0",
+    "mocha": "~2.1.0"
   }
 }
