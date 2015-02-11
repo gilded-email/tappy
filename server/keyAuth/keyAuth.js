@@ -2,17 +2,16 @@ var Promise = require('bluebird');
 var keys = require('../../security/keys/keys');
 
 var keyAuth = {};
-keyAuth.keyCheck = function (req, res) {
-  var keyid = req.params.keyid;
+keyAuth.keyCheck = function (keyid) {
   return new Promise(function (resolve, reject) {
     if (keyid === undefined) {
-      res.sendStatus(400);
+      reject(400);
     } else if (!keys[keyid]) {
-      res.sendStatus(403);
+      reject(403);
     } else if (keys[keyid]) {
       keyAuth.generateJWK(keyid)
         .then(function (jwk) {
-          res.send(jwk);
+          resolve(jwk);
         });
     }
   });
