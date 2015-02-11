@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/hesitant-tapdancers/tappy.png?label=ready&title=Ready)](https://waffle.io/hesitant-tapdancers/tappy)
 # EME
 
 ## MVP Technology Considerations 
