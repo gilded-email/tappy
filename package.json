@@ -20,5 +20,8 @@
   "dependencies": {
     "express": "^4.11.2",
     "bluebird": "~2.9.8"
+  },
+  "devDependencies": {
+    "chai": "~2.0.0"
   }
 }

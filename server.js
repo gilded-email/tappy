@@ -7,8 +7,8 @@ var keyAuth = require('./server/keyAuth/keyAuth');
 var app = express();
 
 var credentials = {
-    key: fs.readFileSync('./security/cl_clearkey-key.pem'),
-    cert: fs.readFileSync('./security/cl_clearkey-cert.pem')
+  key: fs.readFileSync('./security/cl_clearkey-key.pem'),
+  cert: fs.readFileSync('./security/cl_clearkey-cert.pem')
 };
 
 var httpServer = http.createServer(app);
